@@ -1,83 +1,175 @@
-# phrases-website 
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phrases</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://i.pinimg.com/564x/82/f9/59/82f95944859c75c2e4061fb8d1360941.jpg'); /* Replace with your image path */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            background-image: url('https://i.pinimg.com/564x/82/f9/59/82f95944859c75c2e4061fb8d1360941.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            color: #a94444; /* Default text color */
+            color: #0f2681;
         }
+
         .jumbotron {
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             padding: 50px;
             margin-bottom: 0;
         }
+
         .container {
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
         }
+
         textarea.form-control {
             min-height: 150px;
         }
+
         button.btn-primary {
             background-color: #17a2b8;
             border-color: #17a2b8;
         }
+
         button.btn-primary:hover {
             background-color: #138496;
             border-color: #138496;
         }
+
         .heading1 {
-            color: #ff5733; /* Custom color for first heading */
-            font-size: 36px; /* Custom font size for first heading */
+            font-size: 80px;
+            font-family: 'Times New Roman', serif;
         }
+
         .heading2 {
-            color: #006699; /* Custom color for second heading */
-            font-size: 24px; /* Custom font size for second heading */
+            font-size: 22px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
         .paragraph1 {
-            color: #1e8449; /* Custom color for first paragraph */
-            font-size: 18px; /* Custom font size for first paragraph */
+            font-size: 30px;
         }
-        .paragraph2 { 
-            color: #f39c12; /* Custom color for second paragraph */
-            font-size: 16px; /* Custom font size for second paragraph */
+
+        .paragraph2 {
+            font-size: 20px;
+        }
+
+        .color-heading1 {
+            color: #ff5733;
+        }
+
+        .color-heading2 {
+            color: #1a9236;
+        }
+
+        .color-paragraph1 {
+            color: #881a9b;
+        }
+
+        .color-paragraph2 {
+            color: #cf1919;
         }
     </style>
 </head>
+
 <body>
     <header class="jumbotron text-center">
-        <h1 class="heading1">Phrases??</h1>
-        <p class="paragraph1">Disco ver prompts that are unique to you!</p>
+        <h1 class="heading1 color-heading1">Phrases</h1>
+        <p class="paragraph1 color-paragraph1">Discover prompts that are unique to you!</p>
     </header>
 
     <div class="container">
-        <h2 class="heading2"> College Essays?</h2>
-        <p class="paragraph1">Write something here about the importance of essays.</p>
 
-        <h2 class="heading2">Get Started</h2>
-        <p class="paragraph2">Share your story with us, and we'll help you craft a powerful essay.</p>
+        <p class="color-paragraph2 color-paragraph1">Essays offer a glimpse into the individual behind the
+            grades and test scores, providing depth and context to your application. A well-crafted essay showcases your
+            voice, creativity, and passion, allowing admissions committees to connect with you on a more personal level.
+            It's a chance to stand out and make a lasting impression, highlighting what makes you a valuable addition to
+            the academic community.</p>
+
+        <h2 class="heading2 color-heading2">Want feedback from our team?</h2>
+        <p class="color-heading2">Drop your details below and we shall revert back as soon as possible.</p>
 
         <form action="#" method="post">
             <div class="form-group">
-                <label for="essay">Your Story or Write-up</label>
-                <textarea class="form-control" id="essay" name="essay" rows="5" required></textarea>
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="docLink">Google Doc Link (Read Only)</label>
+                <input type="url" class="form-control" id="docLink" name="docLink" required>
+                <small class="form-text text-muted">Make sure the document is in read-only mode.</small>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
+    <div class="container mt-5">
+        <h2 class="heading2 color-heading2">Not sure what to write about?</h2>
+        <p class="color-paragraph2">Let us help you! Schedule a virtual interaction with our team, share your life story, and get suggestions for your essay.</p>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="interaction" id="yes" value="yes">
+                    <label class="form-check-label" for="yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="interaction" id="no" value="no">
+                    <label class="form-check-label" for="no">
+                        No
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="mt-3" id="availability">
+            <h2 class="heading2 color-heading2">Let us know of your availability</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <select class="form-control" id="availabilitySelect" name="availability">
+                        <option value="1-2 days">Next 1-2 days</option>
+                        <option value="3-4 days">Next 3-4 days</option>
+                        <option value="next week">Next week</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <div class="mt-3" id="contactMessage">
+            <p class="color-paragraph2">We will contact you soon via email. Please also check your spam folder.</p>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("availability").style.display = "none";
+        document.getElementById("contactMessage").style.display = "none";
+
+        $('input[type=radio][name=interaction]').change(function () {
+            if (this.value === 'yes') {
+                document.getElementById("availability").style.display = "block";
+            } else if (this.value === 'no') {
+                document.getElementById("availability").style.display = "none";
+            }
+        });
+    </script>
 </body>
+
 </html>
