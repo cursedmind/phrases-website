@@ -48,7 +48,7 @@
             color: #1e8449; /* Custom color for first paragraph */
             font-size: 18px; /* Custom font size for first paragraph */
         }
-        .paragraph2 {
+        .paragraph2 { 
             color: #f39c12; /* Custom color for second paragraph */
             font-size: 16px; /* Custom font size for second paragraph */
         }
@@ -56,8 +56,8 @@
 </head>
 <body>
     <header class="jumbotron text-center">
-        <h1 class="heading1">Phrases</h1>
-        <p class="paragraph1">Discover prompts that are unique to you!</p>
+        <h1 class="heading1">Phrases??</h1>
+        <p class="paragraph1">Disco ver prompts that are unique to you!</p>
     </header>
 
     <div class="container">
