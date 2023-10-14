@@ -96,7 +96,8 @@
         <h2 class="heading2 color-heading2">Want feedback from our team?</h2>
         <p class="color-heading2">Drop your details below and we shall revert back as soon as possible.</p>
 
-        <form action="/.netlify/functions/formSubmission" method="post">
+        <form action="/.netlify/functions/formSubmission1" method="post" onsubmit="submitForm(event, 'successMessage1')">
+
 
             <div class="form-group">
                 <label for="name">Name</label>
@@ -119,9 +120,9 @@
         <h2 class="heading2 color-heading2">Not sure what to write about?</h2>
         <p class="color-paragraph2">Let us help you! Schedule a virtual interaction with our team, share your life story, and get suggestions for your essay.</p>
 
-        <form action="/.netlify/functions/formSubmission" method="post">
-</form>
->
+       <form action="/.netlify/functions/formSubmission2" method="post" onsubmit="submitForm(event, 'successMessage1')">
+
+
             <div class="form-group">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="interaction" id="yes" value="yes">
