@@ -142,9 +142,10 @@
 
         <div class="mt-3" id="availability">
             <h2 class="heading2 color-heading2">Let us know of your availability</h2>
-            <form action="#" method="post">
+            <form action="/.netlify/functions/formSubmission3" method="post" onsubmit="submitForm(event, 'successMessage3')">
                 <div class="form-group">
-                    <select class="form-control" id="availabilitySelect" name="availability">
+                    <select class="form-control" id="availabilitySelect" name="availability" required>
+                        <option value="" disabled selected>Select availability</option>
                         <option value="1-2 days">Next 1-2 days</option>
                         <option value="3-4 days">Next 3-4 days</option>
                         <option value="next week">Next week</option>
@@ -152,14 +153,15 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div class="mt-3" id="successMessage3" style="display:none;">
+                <p class="color-paragraph2">Your availability has been submitted successfully.</p>
+            </div>
         </div>
 
         <div class="mt-3" id="contactMessage">
             <p class="color-paragraph2">We will contact you soon via email. Please also check your spam folder.</p>
         </div>
     </div>
-
-
 
     <script>
         document.getElementById("availability").style.display = "none";
@@ -190,8 +192,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
 </body>
 
 </html>
+
+
