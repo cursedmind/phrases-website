@@ -1,6 +1,6 @@
 
 exports.handler = async function(event, context) {
-  const formData = JSON.parse(event.body);
+  const formData = JSON.parse(event.body);  
 
   const { interaction } = formData;
 
