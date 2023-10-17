@@ -140,7 +140,23 @@
 
     <div class="mt-3" id="availability">
         <h2 class="heading2 color-heading2">Let us know of your availability</h2>
-        <!-- Your existing availability form content remains the same -->
+      
+    <form action="/.netlify/functions/formSubmission3" method="post" onsubmit="submitForm(event, 'successMessage3')">
+        <div class="form-group">
+            <select class="form-control" id="availabilitySelect" name="availability" required>
+                <option value="" disabled selected>Select availability</option>
+                <option value="1-2 days">Next 1-2 days</option>
+                <option value="3-4 days">Next 3-4 days</option>
+                <option value="next week">Next week</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="mt-3" id="successMessage3" style="display:none;">
+        <p class="color-paragraph2">Your availability has been submitted successfully.</p>
+    </div>
+</div>
+
     </div>
 
     <div class="mt-3" id="successMessage2" style="display:none;">
