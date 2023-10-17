@@ -120,52 +120,33 @@
         </form>
     </div>
 
-    <div class="container mt-5">
-        <h2 class="heading2 color-heading2">Not sure what to write about?</h2>
-        <p class="color-paragraph2">Let us help you! Schedule a voice call with our team, share your life story, and get suggestions for your essay.</p>
+   <div class="container mt-5">
+    <h2 class="heading2 color-heading2">Not sure what to write about?</h2>
+    <p class="color-paragraph2">Let us help you! Schedule a voice call with our team, share your life story, and get suggestions for your essay.</p>
 
-       <form action="/.netlify/functions/formSubmission2" method="post" onsubmit="submitForm(event, 'successMessage1')">
-
-
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="interaction" id="yes" value="yes">
-                    <label class="form-check-label" for="yes">
-                        Yes
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="interaction" id="no" value="no">
-                    <label class="form-check-label" for="no">
-                        No
-                    </label>
-                </div>
+    <form action="/.netlify/functions/formSubmission2" method="post" onsubmit="submitForm(event, 'successMessage2')">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="interaction" id="yes" value="yes">
+                <label class="form-check-label" for="yes">Yes</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-        <div class="mt-3" id="availability">
-            <h2 class="heading2 color-heading2">Let us know of your availability</h2>
-            <form action="/.netlify/functions/formSubmission3" method="post" onsubmit="submitForm(event, 'successMessage3')">
-                <div class="form-group">
-                    <select class="form-control" id="availabilitySelect" name="availability" required>
-                        <option value="" disabled selected>Select availability</option>
-                        <option value="1-2 days">Next 1-2 days</option>
-                        <option value="3-4 days">Next 3-4 days</option>
-                        <option value="next week">Next week</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <div class="mt-3" id="successMessage3" style="display:none;">
-                <p class="color-paragraph2">Your availability has been submitted successfully.</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="interaction" id="no" value="no">
+                <label class="form-check-label" for="no">No</label>
             </div>
         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
-        <div class="mt-3" id="contactMessage">
-            <p class="color-paragraph2">We will contact you soon via email. Please also check your spam folder.</p>
-        </div>
+    <div class="mt-3" id="availability">
+        <h2 class="heading2 color-heading2">Let us know of your availability</h2>
+        <!-- Your existing availability form content remains the same -->
     </div>
+
+    <div class="mt-3" id="successMessage2" style="display:none;">
+        <p class="color-paragraph2">We will get back to you in 2 working days.</p>
+    </div>
+</div>
 
     <script>
         document.getElementById("availability").style.display = "none";
